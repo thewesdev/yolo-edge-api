@@ -1,7 +1,6 @@
 import base64
 import io
 import time
-from pathlib import Path
 
 import httpx
 import numpy as np
