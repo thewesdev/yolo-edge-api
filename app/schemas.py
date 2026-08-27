@@ -1,7 +1,8 @@
-from pydantic import BaseModel, Field 
-from typing import List, Optional 
- 
- 
+from typing import List, Optional
+
+from pydantic import BaseModel, Field
+
+
 class PredictRequest(BaseModel): 
     image_base64: Optional[str] = Field( 
         None, 
