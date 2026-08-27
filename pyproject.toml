@@ -1,0 +1,32 @@
+[project]
+name = "yolo-edge-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "thewesdev", email = "waslleynanferdes.dev@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi==0.111.0",
+    "httpx==0.27.0",
+    "numpy==1.26.4",
+    "opencv-python-headless>=4.11.0.86",
+    "pillow==11.0.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.5",
+    "torch>=2.13.0",
+    "torchvision>=0.28.0",
+    "ultralytics==8.2.0",
+    "uvicorn[standard]==0.29.0",
+]
+
+[project.scripts]
+yolo-edge-api = "yolo_edge_api:main"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cpu"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
