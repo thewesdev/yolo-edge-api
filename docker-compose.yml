@@ -36,6 +36,16 @@ services:
     depends_on: 
       yolo-api: 
         condition: service_healthy     # aguarda healthcheck passar
+# Adicione ao docker-compose.yml existente:
+
+  yolo-stream:
+    build:
+      context: .
+      dockerfile: Dockerfile.api    # reutiliza a mesma base ARM64
+    container_name: yolo-stream
+    ports:
+      - "5000:5000"
+    privileged: true              # mesmo acesso à câmera do yolo-api
 
 networks: 
   yolo-net: 
