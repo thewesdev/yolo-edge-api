@@ -11,3 +11,5 @@ images/
 .env
 
 .venv/
+
+dataset/raw

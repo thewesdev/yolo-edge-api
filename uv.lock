@@ -2210,6 +2210,15 @@ wheels = [
 ]
 
 [[package]]
+name = "roboflow"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/dd/67/f1391bfbfbdeb7757dbe3909fa06eebe7a9431819afe8d36a28779d25805/roboflow-0.1.1.tar.gz", hash = "sha256:e1aca6bd4c109755c34a57b566f660c486204239e14f4311be7e15539b6d36b9", size = 17625, upload-time = "2021-09-14T21:07:08.346Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4a/0b/1876944a0e83dde757ee5ad74c088689b65a62e693a77db65e46a8567ad5/roboflow-0.1.1-py3-none-any.whl", hash = "sha256:9b232454916ba4a77df08903062f5289a11900e246b5fce5e8c613c32ea5aa76", size = 21421, upload-time = "2021-09-14T21:07:07.353Z" },
+]
+
+[[package]]
 name = "ruamel-yaml"
 version = "0.19.1"
 source = { registry = "https://pypi.org/simple" }
@@ -3103,6 +3112,7 @@ dependencies = [
     { name = "opencv-python-headless" },
     { name = "pillow" },
     { name = "pytest" },
+    { name = "roboflow" },
     { name = "ruff" },
     { name = "torch", version = "2.13.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'darwin'" },
     { name = "torch", version = "2.13.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform != 'darwin'" },
@@ -3122,6 +3132,7 @@ requires-dist = [
     { name = "opencv-python-headless", specifier = ">=4.11.0.86" },
     { name = "pillow", specifier = "==11.0.0" },
     { name = "pytest", specifier = ">=9.1.1" },
+    { name = "roboflow", specifier = ">=0.1.1" },
     { name = "ruff", specifier = ">=0.16.5" },
     { name = "torch", specifier = ">=2.13.0" },
     { name = "torchvision", specifier = ">=0.28.0" },
