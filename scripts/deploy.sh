@@ -30,11 +30,11 @@ echo "[INFO] Imagem atual: $PREVIOUS"
 # ── Baixa a nova imagem ──────────────────────────────────────
 echo "[1/4] Baixando nova imagem..."
 podman compose pull
-
+uv run dvc pull models/yolov8n.pt
 
 # ── Sobe a nova versão ───────────────────────────────────────
 echo "[2/4] Iniciando nova versão..."
-podman compose up -d
+podman compose up -d --build
 
 # ── Aguarda o serviço estabilizar ────────────────────────────
 echo "[3/4] Aguardando health check ($((HEALTH_RETRIES * HEALTH_WAIT))s max)..."
