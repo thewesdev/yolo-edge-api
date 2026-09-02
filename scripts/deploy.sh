@@ -7,6 +7,7 @@
 
 set -euo pipefail
 
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
 DEPLOY_PATH="${DEPLOY_PATH:-~/yolo-edge-api}"
 HEALTH_URL="http://localhost:8000/health"
