@@ -173,6 +173,7 @@ jobs:
           chmod 600 ~/.ssh/dvc_key
           dvc remote modify --local local_remote keyfile ~/.ssh/dvc_key
           dvc pull models/yolov8n.pt
+          dvc pull models/yolo-epi.pt
       - name: Recuperar dataset via DVC
         run: dvc pull dataset/exports/epi-v1
 
