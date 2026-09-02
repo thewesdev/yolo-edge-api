@@ -11,7 +11,7 @@ services:
       - ./output:/app/output       # resultados gravados aqui 
       - ./images:/app/images:ro    # imagens de teste 
     environment: 
-      - MODEL_NAME=yolov8n.pt 
+      - MODEL_NAME=yolo-epi.pt 
     networks: 
       - yolo-net 
     restart: unless-stopped 
@@ -46,6 +46,13 @@ services:
     ports:
       - "5000:5000"
     privileged: true              # mesmo acesso à câmera do yolo-api
+    command: >
+      python3 stream/mjpeg_server.py
+      --device 0
+      --model models/yolo-epi.pt
+      --infer-every 3
+      --infer-size 320
+      --port 5000
 
 networks: 
   yolo-net: 
